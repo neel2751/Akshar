@@ -6,59 +6,150 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./akshar/akshar.css" />
     <script src="https://cdn.tailwindcss.com"></script>
+
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/gsap.min.js"></script>
     <title>Akshar</title>
   </head>
   <body>
-    <section class="home">
-      <header class="shadow-sm">
-        <div class="max-w-screen-xl lg:p-0 px-4 mx-auto">
-          <div
-            class="flex items-center justify-between space-x-4 lg:space-x-10"
+    <header class="bg-[#b4f3de] sticky top-0 z-50 menu">
+      <div class="max-w-screen-xl lg:p-0 px-4 mx-auto">
+        <div class="flex items-center justify-between space-x-4 lg:space-x-10">
+          <div class="flex lg:w-0 lg:flex-1">
+            <img class="h-20 w-20" src="./akshar/img/Logo.png" />
+          </div>
+
+          <nav
+            class="hidden space-x-8 text-sm lg:uppercase lg:text-gray-500 lg:tracking-wide lg:font-bold lg:text-xs font-medium md:flex"
           >
-            <div class="flex lg:w-0 lg:flex-1">
-              <img
-                class="h-20 w-20"
-                src="./akshar/img/WhatsApp_Image_2022-05-16_at_3.53.20_PM-removebg-preview.png"
-              />
-            </div>
+            <a class="text-gray-500" href="">Home</a>
+            <a class="text-gray-500" href="">About</a>
+            <a class="text-gray-500" href="">Blog</a>
+            <a class="text-gray-500" href="">Projects</a>
+            <a class="text-gray-500" href="">Contact</a>
+          </nav>
 
-            <nav
-              class="hidden space-x-8 text-sm lg:uppercase lg:text-gray-500 lg:tracking-wide lg:font-bold lg:text-xs font-medium md:flex"
+          <div class="lg:hidden">
+            <button
+              class="mobile-menu-button p-2 text-gray-600 bg-gray-100 rounded-lg"
+              type="button"
             >
-              <a class="text-gray-500" href="">Home</a>
-              <a class="text-gray-500" href="">About</a>
-              <a class="text-gray-500" href="">Blog</a>
-              <a class="text-gray-500" href="">Projects</a>
-              <a class="text-gray-500" href="">Contact</a>
-            </nav>
-
-            <div class="lg:hidden">
-              <button
-                class="p-2 text-gray-600 bg-gray-100 rounded-lg"
-                type="button"
+              <span class="sr-only">Open menu</span>
+              <svg
+                aria-hidden="true"
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewbox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
               >
-                <span class="sr-only">Open menu</span>
-                <svg
-                  aria-hidden="true"
-                  class="w-5 h-5"
-                  fill="none"
-                  stroke="currentColor"
-                  viewbox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
+                <path
+                  d="M4 6h16M4 12h16M4 18h16"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- Mobile Responsive -->
+      <div
+        class="mobile-menu md:hidden absolute top-0 inset-x-0 p-2 transition transform origin-top-right hidden"
+      >
+        <div
+          class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-gray-50"
+        >
+          <div class="pt-5 pb-6 px-5">
+            <div class="flex items-center justify-between">
+              <div>
+                <!-- <span class="logo">CompanyHome</span> -->
+                <img
+                  class="h-20 w-auto sm:h-10"
+                  src="./akshar/img/Logo.png"
+                  alt="iCare"
+                />
+              </div>
+              <div class="-mr-2">
+                <button
+                  type="button"
+                  class="close bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
                 >
-                  <path
-                    d="M4 6h16M4 12h16M4 18h16"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                  />
-                </svg>
-              </button>
+                  <span class="sr-only">Close menu</span>
+                  <!-- Heroicon name: outline/x -->
+                  <svg
+                    class="h-6 w-6"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M6 18L18 6M6 6l12 12"
+                    ></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="py-6 px-5 space-y-6">
+            <div class="grid grid-cols-2 gap-y-4 gap-x-8">
+              <a
+                href="#Home"
+                class="text-base font-medium text-gray-900 hover:text-gray-700"
+              >
+                Home
+              </a>
+
+              <a
+                href="#About"
+                class="text-base font-medium text-gray-900 hover:text-gray-700"
+              >
+                About
+              </a>
+
+              <a
+                href="#Services"
+                class="text-base font-medium text-gray-900 hover:text-gray-700"
+              >
+                Services
+              </a>
+              <a
+                href="#Goal"
+                class="text-base font-medium text-gray-900 hover:text-gray-700"
+              >
+                Our Goal
+              </a>
+              <a
+                href="#Contactus"
+                class="text-base font-medium text-gray-900 hover:text-gray-700"
+              >
+                Contact us
+              </a>
+            </div>
+            <div>
+              <p class="mt-6 text-center text-base font-medium text-gray-500">
+                <a
+                  href="tel:+91 9714397773"
+                  class="flex flex-col text-indigo-600 hover:text-indigo-500"
+                >
+                  +91 9714397773
+                  <spna class="text-[#8C8C8C]">Akshay Patel</spna>
+                </a>
+              </p>
             </div>
           </div>
         </div>
-      </header>
+      </div>
+      <!-- Mobile Responsive End -->
+    </header>
+
+    <section class="home">
       <div class="main sm:py-12 lg:py-24">
         <div class="flex flex-col">
           <img class="absolute lg:inline hidden" src="./akshar/img/deco1.svg" />
@@ -69,7 +160,7 @@
         </div>
         <aside class="relative overflow-hidden text-gray-300 lg:flex">
           <div
-            class="w-full p-12 text-center lg:w-1/2 sm:p-16 lg:p-24 lg:text-left"
+            class="w-full p-12 text-center lg:w-1/2 sm:p-e16 lg:p-24 lg:text-left"
           >
             <div class="max-w-xl mx-auto lg:ml-0">
               <p
@@ -233,7 +324,7 @@
             <blockquote
               class="flex flex-col justify-between p-12 -mt-6 text-center rounded-lg"
             >
-              <p class="meet_text text-lg font-bold">Theresa Jordan</p>
+              <p class="meet_text text-lg font-bold">Akshay Patel</p>
               <p class="meet_subtext mt-1 text-xs font-medium">
                 Travel Manager
               </p>
@@ -308,7 +399,7 @@
             <blockquote
               class="flex flex-col justify-between p-12 -mt-6 text-center rounded-lg"
             >
-              <p class="meet_text text-lg font-bold">Akshay Patel</p>
+              <p class="meet_text text-lg font-bold">Priyank Patel</p>
               <p class="meet_subtext mt-1 text-xs font-medium">
                 Travel Specialist
               </p>
@@ -383,7 +474,7 @@
             <blockquote
               class="flex flex-col justify-between p-12 -mt-6 text-center rounded-lg"
             >
-              <p class="meet_text text-lg font-bold">Janny Wilson</p>
+              <p class="meet_text text-lg font-bold">Devang Patel</p>
               <p class="meet_subtext mt-1 text-xs font-medium">
                 Travel Manager
               </p>
@@ -470,10 +561,34 @@
           <p class="mt-6 text-[#969696] text-md font-semibold sm:text-lg">
             Are you ready to fly and Persue your dream to study Abroad.
           </p>
-          <img
+          <svg
+            class="-my-6 mx-10 sm:-mx-6 h-34 w-34"
+            width="175"
+            height="173"
+            viewBox="0 0 175 173"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              class="line"
+              d="M131.167 38.6134C135.139 67.5348 91.3337 47.7762 81.4616 72.7223C71.5895 97.6684 82.7184 105.827 89.9062 103.436C102.034 100.824 107.23 73.0527 75.5776 74.2688C43.9252 75.4849 53.2822 118.492 61.9172 139.843"
+              stroke="#FD9763"
+              stroke-width="4.53676"
+              stroke-linecap="round"
+            />
+            <path
+              class="arro"
+              d="M68.3029 136.059L62.7676 141.468C62.6461 141.587 62.4649 141.62 62.3092 141.552L55.3438 138.518"
+              stroke="#FD9763"
+              stroke-width="4.53676"
+              stroke-linecap="round"
+            />
+          </svg>
+
+          <!-- <img
             class="-my-4 mx-20 sm:mx-0 h-28 w-28"
             src="./akshar/img/Arrow.svg"
-          />
+          /> -->
           <a
             class="flex items-center justify-center px-8 py-4 font-bold transition bg-pink-100 border-4 border-black rounded-xl focus:outline-none focus:ring shadow-[6px_6px_0_0_#000] hover:shadow-none active:bg-pink-50"
             href="#"
@@ -529,7 +644,7 @@
           <div class="max-w-sm mx-auto lg:max-w-none">
             <img
               class="block mx-auto sm:mx-0 h-28 w-28"
-              src="./akshar/img/WhatsApp_Image_2022-05-16_at_3.53.20_PM-removebg-preview.png"
+              src="./akshar/img/Logo.png"
             />
             <p
               class="mt-4 font-semibold text-center sm:tracking-tighter sm:w-96 text-[#A1A1A1] lg:text-left lg:text-md"
@@ -729,5 +844,6 @@
       </div>
     </footer>
     <!-- Footer Section Finished -->
+    <script src="./akshar/js/index.js"></script>
   </body>
 </html>

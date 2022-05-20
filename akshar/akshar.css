@@ -6,6 +6,7 @@
 
 body {
   font-family: "Montserrat", sans-serif;
+  transition: all 2s ease-in-out;
 }
 .home {
   background: linear-gradient(
@@ -54,4 +55,27 @@ body {
   display: flex;
   align-self: flex-end;
   /* justify-self: end; */
+}
+.arro {
+  stroke-dashoffset: 50;
+  stroke-dasharray: 50;
+  transition: stroke-dashoffset 1.8s ease-in-out;
+}
+.line {
+  stroke-dashoffset: 348;
+  stroke-dasharray: 348;
+  transition: stroke-dashoffset 1.5s ease-in-out;
+}
+.arros {
+  stroke-dashoffset: 0;
+  stroke-dasharray: 50;
+  transition: stroke-dashoffset 1.8s ease-in-out;
+}
+.lines {
+  stroke-dashoffset: 0;
+  stroke-dasharray: 348;
+  transition: stroke-dashoffset 1.5s ease-in-out;
+}
+.menu {
+  transition: all 0.3s ease-in-out;
 }
