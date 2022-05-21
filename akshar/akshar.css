@@ -4,6 +4,11 @@
   --header_color: #2b2945;
 }
 
+html {
+  scroll-behavior: smooth;
+  transition: all 1.5s ease;
+}
+
 body {
   font-family: "Montserrat", sans-serif;
   transition: all 2s ease-in-out;
@@ -147,7 +152,7 @@ body {
 .model_info {
   display: flex;
   justify-content: space-between;
-  padding: 10px 20px;
+  padding: 5px 20px;
 }
 .model_call {
   display: flex;
@@ -169,5 +174,5 @@ body {
   pointer-events: auto;
 }
 .model_wrapper.active .model_container {
-  transform: translateY(0px);
+  transform: translateY(-50px);
 }

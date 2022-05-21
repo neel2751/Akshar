@@ -22,11 +22,12 @@
           <nav
             class="hidden space-x-8 text-sm lg:uppercase lg:text-gray-500 lg:tracking-wide lg:font-bold lg:text-xs font-medium md:flex"
           >
-            <a class="text-gray-500" href="">Home</a>
-            <a class="text-gray-500" href="">About</a>
-            <a class="text-gray-500" href="">Blog</a>
-            <a class="text-gray-500" href="">Projects</a>
-            <a class="text-gray-500" href="">Contact</a>
+            <a class="text-gray-500" href="#Home">Home</a>
+            <a class="text-gray-500" href="#About">About</a>
+            <a class="text-gray-500" href="#Explore">Explore</a>
+            <a class="text-gray-500" href="#Team">My Team</a>
+            <a class="text-gray-500" href="#Student">Student</a>
+            <a class="text-gray-500" href="#Contact">Contact</a>
           </nav>
 
           <div class="lg:hidden">
@@ -114,19 +115,25 @@
               </a>
 
               <a
-                href="#Services"
+                href="#Explore"
                 class="text-base font-medium text-gray-900 hover:text-gray-700"
               >
-                Services
+                Explore
               </a>
               <a
-                href="#Goal"
+                href="#Team"
                 class="text-base font-medium text-gray-900 hover:text-gray-700"
               >
-                Our Goal
+                My Team
               </a>
               <a
-                href="#Contactus"
+                href="#Student"
+                class="text-base font-medium text-gray-900 hover:text-gray-700"
+              >
+                Student
+              </a>
+              <a
+                href="#Contact"
                 class="text-base font-medium text-gray-900 hover:text-gray-700"
               >
                 Contact us
@@ -149,7 +156,7 @@
       <!-- Mobile Responsive End -->
     </header>
 
-    <section class="home">
+    <section id="Home" class="home">
       <div class="main sm:py-12 lg:py-24">
         <div class="flex flex-col">
           <img class="absolute lg:inline hidden" src="./akshar/img/deco1.svg" />
@@ -178,7 +185,7 @@
 
               <a
                 id="button"
-                class="inline-block px-5 py-3 mt-8 text-sm font-medium text-white bg-[#1EC28B] rounded-lg hover:bg-[#1EC28B]"
+                class="cursor-pointer inline-block px-5 py-3 mt-8 text-sm font-medium text-white bg-[#1EC28B] rounded-lg hover:bg-[#1EC28B]"
               >
                 Get started today
               </a>
@@ -203,7 +210,7 @@
           <button class="btn_close">×</button>
           <h1 class="model_contact">Contact Infomation</h1>
           <div class="model_img">
-            <img class="h-64 w-64" src="./akshar/img/contactpop.svg" alt="" />
+            <img class="h-64 w-64" src="./akshar/img/contact.svg" alt="" />
           </div>
           <h1 class="model_contact_share">
             Ready to share your expriences with us
@@ -269,7 +276,7 @@
                 </svg>
                 <a
                   target="_blank"
-                  href="https://maps.google.com/?q=Gandhi Pole, Gana, Gujarat"
+                  href="https://maps.google.com/?q=Akshar international, Gandhi Pole, Gana, Gujarat"
                 >
                   <h4>Gandhi Pole, Gana</h4></a
                 >
@@ -306,7 +313,7 @@
       <!-- Popup Contact Screen End -->
     </section>
     <!-- About Us Section -->
-    <section class="py-10">
+    <section id="About" class="py-10">
       <div
         class="container flex flex-col justify-center p-6 mx-auto sm:py-12 lg:py-24 lg:flex-row lg:justify-around"
       >
@@ -391,7 +398,7 @@
     </section>
     <!-- About Us Finished -->
     <!-- Explore Section start -->
-    <section class="py-10">
+    <section id="Explore" class="py-10">
       <div class="flex flex-col justify-center items-center">
         <h1 class="exp_text font-bold sm:text-5xl text-xl text-center">
           Explore The Beauty Of The World
@@ -401,7 +408,7 @@
     </section>
     <!-- Explore Section Finished -->
     <!-- Team Section Start -->
-    <section class="bg-[#E8FCF6]">
+    <section id="Team" class="bg-[#E8FCF6]">
       <div class="flex flex-col">
         <img class="absolute lg:inline hidden" src="./akshar/img/deco1.svg" />
         <img
@@ -650,7 +657,7 @@
     </section>
     <!-- Team Seaction Finished -->
     <!-- Study Section Start -->
-    <section class="py-10">
+    <section id="Student" class="py-10">
       <h1 class="exp_text font-bold sm:text-5xl text-md text-center">
         Start Your Journey to Study Aborad
       </h1>
@@ -717,8 +724,8 @@
     </section>
     <!-- Study Section Finished -->
     <!-- Faq -->
-    <section class="p-12">
-      <h1 class="exp_text font-bold sm:text-5xl text-md text-center">FAQs</h1>
+    <section id="Faq" class="sm:p-12 p-4">
+      <h1 class="exp_text font-bold sm:text-5xl text-2xl text-center">FAQs</h1>
       <div
         class="bg-white mt-10 border border-gray-200 divide-y divide-gray-200 rounded-xl"
       >
@@ -769,9 +776,11 @@
           </p>
         </details>
 
-        <details class="p-6 group">
-          <summary class="flex items-center justify-between cursor-pointer">
-            <h5 class="text-lg font-medium text-gray-900">
+        <details class="p-6 group outline-0">
+          <summary
+            class="flex items-center justify-between cursor-pointer outline-0"
+          >
+            <h5 class="text-lg font-medium text-gray-900 outline-0">
               Lorem ipsum dolor sit amet consectetur adipisicing?
             </h5>
 
@@ -819,7 +828,7 @@
     </section>
     <!-- Faq end -->
     <!-- Footer Section Start -->
-    <footer class="bg-[#E8FCF6]">
+    <footer id="Contact" class="bg-[#E8FCF6]">
       <div class="max-w-screen-xl px-4 pt-16 pb-8 mx-auto sm:px-6 lg:px-8">
         <div class="max-w-md mx-auto">
           <strong
